@@ -53,9 +53,11 @@ def query(connect, sql):
         result = insert(connect, sql)
         return result
     elif sql.lstrip().upper().startswith("UPDATE"):
-        update(connect)
+        result = update(connect, sql)
+        return result
     elif sql.lstrip().upper().startswith("DELETE"):
-        delete(connect)
+        result = delete(connect, sql)
+        return result
     else:
         pass
 
@@ -98,22 +100,50 @@ def insert(connect, sql):
     return result
 
 
-def update(cursor):
+def update(connect, sql):
     """
     UPDATE语句
-    :param cursor:
+    :param connect:
+    :param sql:
+    :type connect: sqlite3.Connection
     :return:
     """
-    pass
+    # 执行SQL
+    try:
+        connect.execute(sql)
+        connect.commit()
+        result = 1
+    except sqlite3.DatabaseError:
+        result = 0
+        print(sqlite3.DatabaseError)
+    except sqlite3.Error:
+        result = 0
+        print(sqlite3.Error)
+
+    return result
 
 
-def delete(cursor):
+def delete(connect, sql):
     """
     DELETE语句
-    :param cursor:
+    :param connect:
+    :param sql:
+    :type connect: sqlite3.Connection
     :return:
     """
-    pass
+    # 执行SQL
+    try:
+        connect.execute(sql)
+        connect.commit()
+        result = 1
+    except sqlite3.DatabaseError:
+        result = 0
+        print(sqlite3.DatabaseError)
+    except sqlite3.Error:
+        result = 0
+        print(sqlite3.Error)
+
+    return result
 
 
 if __name__ == '__main__':
