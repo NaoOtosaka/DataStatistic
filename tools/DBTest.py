@@ -26,7 +26,7 @@ def connect_database():
     :return: 链接对象
     """
     # 挂载链接
-    connect = sqlite3.connect('../data.db')
+    connect = sqlite3.connect('../databases/data.db')
     # 强制启动外键约束
     connect.execute("PRAGMA foreign_keys=1;")
 
