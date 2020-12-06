@@ -147,7 +147,7 @@ def delete(connect, sql):
 
 
 if __name__ == '__main__':
-    conn = sqlite3.connect('../data.db')
+    conn = sqlite3.connect('../databases/data.db')
 
     print(type(conn))
 
