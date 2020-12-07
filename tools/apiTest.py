@@ -143,7 +143,7 @@ def get_developer_with_project(project_id):
     result = db(sql)
     if result:
         print(result)
-        print(len(result))
+
         for i in range(len(result)):
             temp.append(
                 {
@@ -183,7 +183,7 @@ def get_tester_with_project(project_id):
     result = db(sql)
     if result:
         print(result)
-        print(len(result))
+
         for i in range(len(result)):
             temp.append(
                 {
