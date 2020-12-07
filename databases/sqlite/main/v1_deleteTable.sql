@@ -1,0 +1,12 @@
+DROP TABLE "main"."bug";
+DROP TABLE "main"."bug_type";
+DROP TABLE "main"."bug_category";
+DROP TABLE "main"."develop";
+DROP TABLE "main"."developer";
+DROP TABLE "main"."develop_type";
+DROP TABLE "main"."planner";
+DROP TABLE "main"."project";
+DROP TABLE "main"."project_phases";
+DROP TABLE "main"."test";
+DROP TABLE "main"."test_plan";
+DROP TABLE "main"."tester";
