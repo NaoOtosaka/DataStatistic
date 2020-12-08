@@ -1,9 +1,9 @@
 -- QA侧测试用数据
-INSERT INTO "tester" ("name")
+INSERT INTO "tester" ("name", "email")
 VALUES
-	("QA侧测试1"),
-	("QA侧测试2"),
-	("QA侧测试3");
+	("QA侧测试1", "test1@mail.com"),
+	("QA侧测试2", "test2@mail.com"),
+	("QA侧测试3", "test3@mail.com");
 
 
 -- 开发侧测试用数据

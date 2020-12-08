@@ -59,6 +59,7 @@ DROP TABLE IF EXISTS "tester";
 CREATE TABLE "tester" (
   "tester_id" INTEGER NOT NULL,
   "name" NVARCHAR(16) NOT NULL,
+	"email" VARCHAR(255) NOT NULL,
   PRIMARY KEY ("tester_id")
 );
 
