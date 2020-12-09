@@ -7,20 +7,20 @@ VALUES
 
 
 -- 开发侧测试用数据
-INSERT INTO "developer" ("name", "type_id")
+INSERT INTO "developer" ("name", "type_id", "email")
 VALUES
-	("开发侧测试1", 1),
-	("开发侧测试2", 2),
-	("开发侧测试3", 3),
-	("开发侧测试4", 4);
+	("开发侧测试1", 1, "develop1@mail.com"),
+	("开发侧测试2", 2, "develop2@mail.com"),
+	("开发侧测试3", 3, "develop3@mail.com"),
+	("开发侧测试4", 4, "develop4@mail.com");
 	
 
 -- 策划侧测试用数据
-INSERT INTO "planner" ("name")
+INSERT INTO "planner" ("name", "email")
 VALUES
-	("策划侧测试1"),
-	("策划侧测试2"),
-	("策划侧测试3");
+	("策划侧测试1", "planner1@mail.com"),
+	("策划侧测试2", "planner2@mail.com"),
+	("策划侧测试3", "planner3@mail.com");
 
 
 -- 测试用项目

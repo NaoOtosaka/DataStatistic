@@ -39,6 +39,7 @@ DROP TABLE IF EXISTS "planner";
 CREATE TABLE "planner" (
   "planner_id" INTEGER NOT NULL,
   "name" NVARCHAR(16) NOT NULL,
+	"email" VARCHAR(255) NOT NULL,
   PRIMARY KEY ("planner_id")
 );
 
@@ -49,6 +50,7 @@ CREATE TABLE "developer" (
   "developer_id" INTEGER NOT NULL,
   "type_id" INTEGER NOT NULL,
   "name" NVARCHAR(16) NOT NULL,
+	"email" VARCHAR(255) NOT NULL,
   PRIMARY KEY ("developer_id"),
   CONSTRAINT "typeId" FOREIGN KEY ("type_id") REFERENCES "develop_type" ("type_id") ON DELETE CASCADE ON UPDATE CASCADE
 );
